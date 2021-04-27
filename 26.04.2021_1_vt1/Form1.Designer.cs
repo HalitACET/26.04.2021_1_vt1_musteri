@@ -250,6 +250,7 @@
             this.btnBul.TabIndex = 20;
             this.btnBul.Text = "Bul";
             this.btnBul.UseVisualStyleBackColor = true;
+            this.btnBul.Click += new System.EventHandler(this.btnBul_Click);
             // 
             // btnSil
             // 

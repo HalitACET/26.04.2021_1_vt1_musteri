@@ -62,5 +62,31 @@ namespace _26._04._2021_1_vt1
             cmbIlce.ValueMember = "IlceId";
             bgl.kapat();
         }
+
+        private void btnBul_Click(object sender, EventArgs e)
+        {
+            MusteriCrud ara = new MusteriCrud();
+
+            Musteri musteri = new Musteri();
+
+            musteri= ara.bul(txtAd.Text, txtSoyad.Text);
+
+            if (musteri.Ad!=null)
+            {
+                txtAd.Text = musteri.Ad;
+                txtSoyad.Text = musteri.Soyad;
+                txtDogumYeri.Text = musteri.Dyer1;
+                cmbCinsiyet.Text = musteri.Cinsiyet1;
+                dateTimePicker1.Value = Convert.ToDateTime(musteri.Dtar1);
+                cmbIl.Text = musteri.Il1;
+                cmbIlce.Text = musteri.Ilce1;
+                cmbSemt.Text = musteri.Semt;
+            }
+            else
+            {
+                MessageBox.Show("Bulunamadı");
+            }
+
+        }
     }
 }
